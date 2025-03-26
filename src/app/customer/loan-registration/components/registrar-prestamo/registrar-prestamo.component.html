@@ -1,0 +1,34 @@
+<form [formGroup]="prestamoForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Cliente ID</mat-label>
+    <input matInput type="number" formControlName="clienteId" />
+    <mat-error *ngIf="prestamoForm.get('clienteId')?.errors?.['required']">
+      Este campo es obligatorio.
+    </mat-error>
+    <mat-error *ngIf="prestamoForm.get('clienteId')?.errors?.['min']">
+      El valor debe ser mayor a 0.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Copias (IDs separados por comas)</mat-label>
+    <input matInput type="text" formControlName="copias" />
+    <mat-error *ngIf="prestamoForm.get('copias')?.errors?.['required']">
+      Este campo es obligatorio.
+    </mat-error>
+    <mat-error *ngIf="prestamoForm.get('copias')?.errors?.['pattern']">
+      Formato inválido. Usa solo números separados por comas.
+    </mat-error>
+    <mat-error *ngIf="prestamoForm.get('copias')?.errors?.['maxCopias']">
+      No puedes registrar más de 3 copias por préstamo.
+    </mat-error>
+    
+    <mat-error *ngIf="prestamoForm.get('copias')?.errors?.['repeatedCopias']">
+      No puedes repetir copias en el mismo préstamo.
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!prestamoForm.valid">
+    Registrar Préstamo
+  </button>
+</form>

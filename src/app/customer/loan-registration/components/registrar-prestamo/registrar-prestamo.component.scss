@@ -1,0 +1,44 @@
+::ng-deep .snackbar-success {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  ::ng-deep .snackbar-error {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  button[type="submit"] {
+    align-self: center;
+    width: 100%;
+    max-width: 80%;
+  }
+  
+  @media (max-width: 600px) {
+    form {
+      margin: 1rem;
+      padding: 1rem;
+    }
+  
+    button[type="submit"] {
+      width: 100%;
+      align-self: center;
+    }
+  }
+  

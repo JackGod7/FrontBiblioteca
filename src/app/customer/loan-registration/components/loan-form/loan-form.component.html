@@ -1,0 +1,39 @@
+
+  <h2>
+    ENVIO
+  </h2>
+<mat-card>
+  <form [formGroup]="loanForm" (ngSubmit)="submitLoanRequest()" class="form-wrapper">
+
+    <!-- Dirección -->
+    <mat-form-field appearance="outline">
+      <mat-label>Dirección de entrega</mat-label>
+      <input matInput formControlName="address" placeholder="Enter your address" />
+      <mat-error *ngIf="loanForm.get('address')?.hasError('required')">
+        La dirección es obligatoria
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Medio de Pago -->    <mat-form-field appearance="outline">
+      <mat-label>Método de pago</mat-label>
+      <mat-select formControlName="paymentMethod" placeholder="Select a method">
+        <mat-option *ngFor="let method of paymentMethods" [value]="method">
+          {{ method }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="loanForm.get('paymentMethod')?.hasError('required')">
+        Se requiere método de pago
+      </mat-error>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="loanForm.invalid || selectedBookIds.length === 0"
+    >
+    Enviar solicitud de préstamo
+    </button>
+
+  </form>
+</mat-card>

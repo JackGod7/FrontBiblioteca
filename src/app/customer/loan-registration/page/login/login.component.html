@@ -1,0 +1,26 @@
+<div class="login-container">
+    <h2>Iniciar sesión</h2>
+    <button mat-raised-button color="primary" (click)="loginWithGoogle()">
+      Ingresar con Google
+    </button>
+
+    <form [formGroup]="otpForm" (ngSubmit)="sendOtp()">
+      <mat-form-field appearance="fill">
+        <mat-label>Número de Teléfono</mat-label>
+        <input matInput formControlName="phone" placeholder="+51 987654321" />
+      </mat-form-field>
+
+      <button mat-raised-button color="accent" type="submit">Enviar OTP</button>
+    </form>
+
+    <form *ngIf="confirmationResult" [formGroup]="codeForm" (ngSubmit)="verifyCode()">
+      <mat-form-field appearance="fill">
+        <mat-label>Código OTP</mat-label>
+        <input matInput formControlName="code" />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Verificar</button>
+    </form>
+
+    <div id="recaptcha-container"></div>
+  </div>

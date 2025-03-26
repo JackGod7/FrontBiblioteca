@@ -1,0 +1,98 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "category": "Software",
+      "available": true
+    },
+    {
+      "id": "2",
+      "title": "1984",
+      "author": "George Orwell",
+      "category": "Fiction",
+      "available": true
+    },
+    {
+      "id": "3",
+      "title": "Design Patterns",
+      "author": "GoF",
+      "category": "Software",
+      "available": true
+    }
+  ],
+  "loans": [
+    {
+      "id": "1001",
+      "books": [
+        1,
+        2
+      ],
+      "deliveryAddress": "123 Elm St",
+      "paymentMethod": "Yape",
+      "requestDate": "2025-03-25T10:20:00",
+      "status": "Pending"
+    },
+    {
+      "id": "5c90",
+      "books": [
+        1,
+        3,
+        2
+      ],
+      "deliveryAddress": "asd",
+      "paymentMethod": "Yape"
+    },
+    {
+      "id": "9093",
+      "books": [
+        1
+      ],
+      "deliveryAddress": "asd",
+      "paymentMethod": "Yape"
+    },
+    {
+      "id": "a2a6",
+      "books": [
+        1,
+        2,
+        3
+      ],
+      "deliveryAddress": "asd",
+      "paymentMethod": "Yape"
+    },
+    {
+      "id": "b603",
+      "books": [
+        2
+      ],
+      "deliveryAddress": "sss",
+      "paymentMethod": "Yape"
+    },
+    {
+      "id": "2cb2",
+      "books": [
+        1
+      ],
+      "deliveryAddress": "asdasd",
+      "paymentMethod": "Yape"
+    },
+    {
+      "id": "1447",
+      "books": [
+        3
+      ],
+      "deliveryAddress": "SDSDA",
+      "paymentMethod": "Yape"
+    },
+    {
+      "id": "087f",
+      "books": [
+        1
+      ],
+      "deliveryAddress": "sds",
+      "paymentMethod": "Visa"
+    }
+  ]
+}

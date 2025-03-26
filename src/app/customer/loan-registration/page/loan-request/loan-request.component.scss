@@ -1,0 +1,51 @@
+:host {
+  display: block;
+  background-color: #ffffff;
+}
+
+
+
+mat-card {
+  padding: 160px;
+  margin-bottom: 24px;
+}
+
+mat-toolbar {
+  position: sticky;
+  padding: 0px 100px;
+  z-index: 10;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-size: 24px;
+  font-weight: bold;
+  background: #000;
+}
+
+subtitulo {
+  padding: 0px 100px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+button {
+  margin-top: 16px;
+}
+
+.table-container {
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.page-container {
+  padding: 24px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

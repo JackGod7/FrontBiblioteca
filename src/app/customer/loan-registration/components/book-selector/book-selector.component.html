@@ -1,0 +1,11 @@
+<mat-card>
+    <h2>Seleccionar libros disponibles (máximo 3)</h2>
+    <mat-selection-list>
+      <mat-list-option *ngFor="let book of books"
+                       [selected]="isSelected(book.id)"
+                       (click)="toggleSelection(book.id)">
+        {{ book.title }} - {{ book.author }}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card>
+`
