@@ -1,9 +1,15 @@
-table {
+
+  .table-container {
+    overflow-x: auto;
     width: 100%;
     margin-top: 10px;
   }
   
   mat-card {
+    margin: 1rem auto;
     margin-top: 24px;
   }
   
+  .expanded-row td {
+    padding: 0;
+  }

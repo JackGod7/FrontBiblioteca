@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { Book } from '../models/book.model';
 import { Loan, PrestamoRequest, PrestamoResponse } from '../models/loan.model';
+import { Prestamo } from '../models/loan-history.model';
 
 @Injectable({
   providedIn: 'root'
@@ -41,5 +42,12 @@ export class LoanService {
         })
       );
   }
-  
+  getLoanHistory(): Observable<Prestamo[]> {
+    return this.http.get<Prestamo[]>(`${this.baseUrl}/api/Prestamo/listar`).pipe(
+      catchError(error => {
+        console.error('Error al obtener historial de préstamos:', error);
+        return of([]); // Devuelve lista vacía para no romper el componente
+      })
+    );
+  }
 }

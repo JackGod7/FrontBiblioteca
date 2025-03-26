@@ -8,13 +8,13 @@ export interface Loan {
   }
 
   export interface PrestamoRequest {
-    clienteId: number; // ID del cliente que solicita el préstamo
-    copias: number[]; // Array de IDs de las copias de libros que se solicitan
+    clienteId: number; 
+    copias: number[]; 
   }
   
   export interface PrestamoResponse {
-    reservaId: number;  // ID único para la reserva realizada
-    fechaReserva: string; // Fecha en la que se realizó la reserva
-    estado: string; // Estado del préstamo, e.g., "confirmado", "pendiente", "rechazado"
-    mensaje: string; // Mensaje adicional, por ejemplo, detalles del error o confirmación
+    reservaId: number;  
+    fechaReserva: string; 
+    estado: string; 
+    mensaje: string; 
   }
